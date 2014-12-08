@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:orientation="vertical"
+     >
+<TextView
+        android:id="@+id/titleLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/FileNameStyle"
+        android:layout_alignParentTop="true"
+        android:text="Title : "
+    android:textStyle="bold" />
+<EditText
+    android:id="@+id/titletext"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:textAppearance="@style/FileNameStyle"
+    android:layout_toRightOf="@+id/titleLable"
+    android:hint="&lt;Click to set&gt;"
+    android:singleLine="true"
+    android:ellipsize="middle"
+    android:background="#00000000"
+    android:longClickable="false"
+    android:layout_alignParentTop="true" />
+
+<ImageView
+        android:id="@+id/musicbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="playOrStopClick"
+        />
+
+<ImageView
+    android:id="@+id/row_img"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_below="@+id/titleLable"
+    />
+<TextView 
+	    android:id="@+id/filename"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+    android:layout_gravity="center"
+    android:gravity="left|center_vertical"
+    android:layout_below="@+id/titletext"
+    android:layout_toRightOf="@+id/row_img"
+    android:layout_marginLeft="10dp"
+    android:textAppearance="@style/FileNameStyle"
+    android:textSize="12sp"
+    android:singleLine="true"
+    android:ellipsize="middle"/>
+
+<TextView 
+    android:id="@+id/albumLable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="@style/FileNameStyle"
+    android:layout_below="@id/row_img"
+    android:text="Album : "
+    android:textStyle="bold" />
+
+<EditText 
+    android:id="@+id/editalbuminfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAppearance="@style/FileNameStyle"
+    android:layout_below="@id/row_img"
+    android:layout_toRightOf="@+id/albumLable"
+    android:hint="&lt;Click to set&gt;"
+    android:singleLine="true"
+    android:background="#00000000"
+    android:longClickable="false"
+    />
+
+<Button
+	    android:id="@+id/save"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:layout_below="@id/editalbuminfo"
+    	android:text="Save"
+        android:onClick="saveInfoClick"
+        android:layout_alignParentBottom="true"
+    	android:textAppearance="@style/FileNameStyle"
+/>
+<TextView
+        android:id="@+id/entryinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/FileNameStyle"
+        android:paddingRight="10dp"
+        android:textColor="#808080"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/musicbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:textAppearance="@style/FileNameStyle"
+        android:textColor="#808080"/>
+
+</RelativeLayout>
